@@ -12,7 +12,7 @@ passport.use(new GoogleStrategy({
     clientID: process.env.CLIENT_ID,
     clientSecret: process.env.CLIENT_SECRET,
     //callbackURL: `http://localhost:${process.env.PORT}/api/googlelogin/callback`
-    //callbackURL:`http://localhost:8080/login/googlelogin/callback`
+    //callbackURL:`http://127.0.0.1:8080/login/googlelogin/callback`
     callbackURL: `https://pokebattles12.herokuapp.com/login/googlelogin/callback`
 }, async (accessToken, referenceToken, profile, done) => {
 
