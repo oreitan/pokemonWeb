@@ -1,0 +1,30 @@
+{
+  "name": "pokemonroot",
+  "version": "1.0.0",
+  "description": "Distributed Cloud Services final project 3a",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node ./index.js",
+    "dev": "nodemon ./index.js"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "d3": "^5.15.0",
+    "dotenv": "^8.2.0",
+    "errorhandler": "^1.5.1",
+    "express": "^4.17.1",
+    "googleapis": "^47.0.0",
+    "heroku": "^7.37.0",
+    "jsonwebtoken": "^8.5.1",
+    "mongo": "^0.1.0",
+    "mongoose": "^5.8.9",
+    "node": "^13.6.0",
+    "nodemon": "^2.0.2",
+    "passport": "^0.4.1",
+    "passport-google-oauth": "^2.0.0",
+    "passport-jwt": "^4.0.0",
+    "socket.io": "^2.3.0"
+  }
+}
