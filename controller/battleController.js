@@ -280,61 +280,35 @@ handicap: req.body.handicap
 
       if(req.body.player1[0].type2)
       {
-        console.log("in 1");
+        
         battle.player1[0].type2=req.body.player1[0].type2;
       }
 
       if(req.body.player1[1].type2)
       {
-        console.log("in 2");
+        
         battle.player1[1].type2=req.body.player1[1].type2;
       }
 
       if(req.body.player1[2].type2)
       {
-        console.log("in 3");
+        
         battle.player1[2].type2=req.body.player1[2].type2;
       }
 
       console.log(battle);
 
-
-
-      // let obj = await pokemon.exists();
-      //console.log(obj,pokemon);
-      // if (obj)
-      //     throw {
-      //         status: 409,
-      //         message: 'A Pokemon with same id already exists'
-      //     };
-
      let battelRes = await battle.save();
-     //console.log(battelRes._id);
+     
 
 
       res.status(200).send(battelRes._id);
 
     } catch (err) {
-      console.log(err);
+      
       errHandler.Error(res, err);
     };
   }
-
-
- 
-
-  // static async readAll(req, res) {
-  //     try {
-  //         let obj = await Pokemons.getPokemons();
-  //         if (!obj || obj.length == 0) throw {
-  //             status: 204,
-  //             message: 'There are no pokemons'
-  //         };
-  //         res.status(200).json(obj);
-  //     } catch (err) {
-  //         errHandler.Error(res, err);
-  //     }
-  // }
 
 
   static async update(req, res) {
@@ -346,7 +320,7 @@ handicap: req.body.handicap
         message: `The Battle with ID ${req.params._id} doesn't exist`
       };
 
-      console.log(obj);
+       console.log(obj);
 
       
       obj.player2[0].id = req.body.player2[0].pokedex_number;
@@ -446,24 +420,24 @@ handicap: req.body.handicap
 
       if(req.body.player2[0].type2)
       {
-        console.log("in 1");
+        // console.log("in 1");
         obj.player2[0].type2=req.body.player2[0].type2;
       }
 
       if(req.body.player2[1].type2)
       {
-        console.log("in 2");
-        obj.player1[1].type2=req.body.player1[1].type2;
+        // console.log("in 2");
+        obj.player1[1].type2=req.body.player2[1].type2;
       }
 
       if(req.body.player2[2].type2)
       {
-        console.log("in 3");
+        // console.log("in 3");
         obj.player2[2].type2=req.body.player2[2].type2;
       }
 
-      console.log("player 2:  ");
-      console.log(obj);
+      // console.log("player 2:  ");
+      // console.log(obj);
 
 
 
@@ -485,8 +459,8 @@ handicap: req.body.handicap
 
 static async updateHP(req, res) {
   try{
-    console.log("inside HP ");
-    console.log(req.params._id);
+    // console.log("inside HP ");
+    // console.log(req.params._id);
     this.checkID(req.params._id);
     let obj = await Battles.getBattle(req.params._id);
     if(!obj) throw{
@@ -494,7 +468,7 @@ static async updateHP(req, res) {
       message: 'The battle doesnt exist'
     };
 
-    console.log(obj);
+    // console.log(obj);
 
     //player 1:
       //pokemon 1:
@@ -598,8 +572,8 @@ static async updateHP(req, res) {
       obj.player2[2].type2=req.body.player2[2].type2;
     }
 
-    console.log("HP:  ");
-    console.log(obj);
+    // console.log("HP:  ");
+    // console.log(obj);
 
     let r = await Battles.updateBattle(obj);
 

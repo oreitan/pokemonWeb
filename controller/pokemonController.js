@@ -191,44 +191,6 @@ class PokemonController {
     }
 
 
-    static async update(req, res) {
-        // try {
-        //     this.checkID(req.params.pokedex_number);
-        //     let obj = await Pokemons.getPokemon(req.params.pokedex_number);
-        //     if (!obj) throw {
-        //         status: 204,
-        //         message: 'The pokemon doesnt exist'
-        //     };
-
-        //     if (req.req.body[i].names_getting_married)
-        //         obj.names_getting_married = req.req.body[i].names_getting_married;
-        //     if (req.req.body[i].year && req.req.body[i].month && req.req.body[i].day) {
-        //         let date = moment(`${req.req.body[i].day}-${req.req.body[i].month}-${req.req.body[i].year}`, "DD-MM-YYYY");
-
-        //         if (!date.isValid()) throw {
-        //             status: 404,
-        //             message: 'Incorrect date'
-        //         };
-
-        //         obj.date = date.format('DD-MM-YYYY');
-        //     }
-
-        //     if (req.req.body[i].name)
-        //         obj.name = req.req.body[i].name;
-
-        //     if (req.req.body[i].attendence)
-        //         obj.attendence = req.req.body[i].attendence;
-
-        //     let r = await Invitations.updateInvitation(obj);
-        //     if (r.nModified == 0)
-        //         res.status(200).send(`Already up to date`);
-        //     else
-        //         res.status(200).send(`Successfully updated`);
-
-        // } catch (err) {
-        //     errHandler.Error(res, err);
-        // }
-    }
 
     static async delete(req, res) {
         try {
