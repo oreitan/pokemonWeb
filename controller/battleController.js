@@ -312,7 +312,7 @@ handicap: req.body.handicap
      //console.log(battelRes._id);
 
 
-      res.status(200).send(JSON.stringify({_id: battelRes.id}));
+      res.status(200).send(battelRes._id);
 
     } catch (err) {
       console.log(err);
